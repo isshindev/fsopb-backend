@@ -5,7 +5,6 @@ app.use(express.json());
 const cors = require('cors');
 app.use(cors());
 const morgan = require('morgan');
-const { reset } = require('nodemon');
 morgan.token("content", (req, res) => JSON.stringify(req.body));
 app.use(morgan(":method :url :method :url :status :response-time ms - :res[content-length] :content"));
 
