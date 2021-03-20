@@ -45,7 +45,7 @@ app.get('/api/people/:id', (req, res, next) => {
 });
 
 app.delete('/api/people/:id', (req, res, next) => {
-    People.findByIdAndRemove(req.params.id)
+    Person.findByIdAndRemove(req.params.id)
         .then(result => { res.sendStatus(204); })
         .catch(err => next(err));
 });
